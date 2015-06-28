@@ -1,0 +1,12 @@
+/**
+ * Styling for section that display information on the website
+ */
+.section {
+  @include display(flex);
+  @include flex-direction(column);
+
+  &-fullscreen {
+    width: 100%;
+    height: 100%;
+  }
+}
