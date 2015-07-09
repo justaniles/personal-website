@@ -1,12 +1,23 @@
 /**
  * Styling for section that display information on the website
  */
-.section {
-  @include display(flex);
-  @include flex-direction(column);
-
-  &-fullscreen {
+.section-fullscreen {
     width: 100%;
     height: 100%;
-  }
+}
+
+.section-container {
+}
+
+#hero-greeting {
+  margin: 0px;
+  @include align-self(flex-start);
+}
+#hero-name {
+  margin: 15px;
+  font-size: 4em;
+}
+#hero-about {
+  text-align: right;
+  @include align-self(flex-end);
 }

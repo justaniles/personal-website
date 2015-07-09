@@ -8,9 +8,16 @@ html, body {
   margin: 0px;
 }
 
-.center-main-axis {
+/**
+ * Flexbox styles
+ */
+.flexbox {
+  @include display(flex);
+  @include flex-direction(column);
+}
+.flexbox-center-main {
   @include justify-content(center);
 }
-.center-cross-axis {
+.flexbox-center-cross {
   @include align-items(center);
 }
