@@ -13,6 +13,9 @@ html, body {
  */
 .flexbox {
   @include display(flex);
+}
+.flexbox-column {
+  @include display(flex);
   @include flex-direction(column);
 }
 .flexbox-center-main {
@@ -20,4 +23,7 @@ html, body {
 }
 .flexbox-center-cross {
   @include align-items(center);
+}
+.flex-grow {
+  @include flex(1 0 auto);
 }

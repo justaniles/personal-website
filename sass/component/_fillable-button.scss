@@ -1,0 +1,13 @@
+.fillable-button {
+  background-color: transparent;
+  border: 2px solid $color-primary;
+  border-radius: 0px;
+
+  color: $color-primary;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $color-primary;
+    color: white;
+  }
+}

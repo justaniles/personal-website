@@ -7,6 +7,9 @@
 /**
  * Site-wide variables and standards (font, color, padding, etc)
  */
+/**
+ * Site-wide colors
+ */
 /*
  * Base:
  */
@@ -23,6 +26,15 @@ html, body {
  * Flexbox styles
  */
 .flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flexbox-column {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -63,9 +75,28 @@ html, body {
   align-items: center;
   -ms-flex-align: center; }
 
+.flex-grow {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -moz-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto; }
+
 /*
  * Components
  */
+.fillable-button {
+  background-color: transparent;
+  border: 2px solid #222;
+  border-radius: 0px;
+  color: #222;
+  transition: 0.3s; }
+  .fillable-button:hover {
+    background-color: #222;
+    color: white; }
+
 /**
  * Styling for section that display information on the website
  */
@@ -90,3 +121,11 @@ html, body {
   -moz-align-self: flex-end;
   align-self: flex-end;
   -ms-flex-item-align: end; }
+
+#hero-btn-container {
+  margin-top: 1em;
+  width: 100%; }
+  #hero-btn-container #hero-btn-resume {
+    margin-right: 5px; }
+  #hero-btn-container #hero-btn-contact {
+    margin-left: 5px; }

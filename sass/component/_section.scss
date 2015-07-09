@@ -21,3 +21,14 @@
   text-align: right;
   @include align-self(flex-end);
 }
+#hero-btn-container {
+  margin-top: 1em;
+  width: 100%;
+
+  & #hero-btn-resume {
+    margin-right: 5px;
+  }
+  & #hero-btn-contact {
+    margin-left: 5px;
+  }
+}
