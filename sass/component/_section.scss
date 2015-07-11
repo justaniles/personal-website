@@ -7,28 +7,53 @@
 }
 
 .section-container {
+  width: auto;
 }
 
+/**
+ * Hero-section specific styling
+ */
 #hero-greeting {
   margin: 0px;
   @include align-self(flex-start);
 }
 #hero-name {
-  margin: 15px;
-  font-size: 4em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 3em;
+  // For non-phones, make the name slightly larger and offset:
+  @media (min-width: $bp-sm) {
+    font-size: 4em;
+    margin: 15px;
+  }
 }
 #hero-about {
   text-align: right;
   @include align-self(flex-end);
 }
+/* Responsive buttons */
 #hero-btn-container {
   margin-top: 1em;
   width: 100%;
-
-  & #hero-btn-resume {
-    margin-right: 5px;
+  @include flex-wrap(wrap);
+  // For non-phones, ensure buttons are on one row:
+  @media (min-width: $bp-sm) {
+    @include flex-wrap(nowrap);
   }
-  & #hero-btn-contact {
-    margin-left: 5px;
+
+  #hero-btn-resume, #hero-btn-contact {
+    @include flex(1 100%);
+    margin-bottom: 5px;
+  }
+  // For non-phones, format buttons to each take up 50% of row:
+  @media (min-width: $bp-sm) {
+    #hero-btn-resume {
+      margin-right: 5px;
+      @include flex(1 auto);
+    }
+    #hero-btn-contact {
+      margin-left: 5px;
+      @include flex(1 auto);
+    }
   }
 }

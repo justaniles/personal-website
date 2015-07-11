@@ -10,6 +10,9 @@
 /**
  * Site-wide colors
  */
+/**
+ * Site breakpoints (these are the same as Twitter Bootstrap's breakpoints)
+ */
 /*
  * Base:
  */
@@ -20,7 +23,8 @@ html, body {
   width: 100%;
   height: 100%;
   padding: 0px;
-  margin: 0px; }
+  margin: 0px;
+  font-size: 16px; }
 
 /**
  * Flexbox styles
@@ -91,6 +95,7 @@ html, body {
   background-color: transparent;
   border: 2px solid #222;
   border-radius: 0px;
+  padding: 6px 12px;
   color: #222;
   transition: 0.3s; }
   .fillable-button:hover {
@@ -104,6 +109,12 @@ html, body {
   width: 100%;
   height: 100%; }
 
+.section-container {
+  width: auto; }
+
+/**
+ * Hero-section specific styling
+ */
 #hero-greeting {
   margin: 0px;
   -webkit-align-self: flex-start;
@@ -112,8 +123,13 @@ html, body {
   -ms-flex-item-align: start; }
 
 #hero-name {
-  margin: 15px;
-  font-size: 4em; }
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 3em; }
+  @media (min-width: 768px) {
+    #hero-name {
+      font-size: 4em;
+      margin: 15px; } }
 
 #hero-about {
   text-align: right;
@@ -122,10 +138,51 @@ html, body {
   align-self: flex-end;
   -ms-flex-item-align: end; }
 
+/* Responsive buttons */
 #hero-btn-container {
   margin-top: 1em;
-  width: 100%; }
-  #hero-btn-container #hero-btn-resume {
-    margin-right: 5px; }
-  #hero-btn-container #hero-btn-contact {
-    margin-left: 5px; }
+  width: 100%;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  @media (min-width: 768px) {
+    #hero-btn-container {
+      -webkit-box-lines: single;
+      -moz-box-lines: single;
+      box-lines: single;
+      -webkit-flex-wrap: nowrap;
+      -moz-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; } }
+  #hero-btn-container #hero-btn-resume, #hero-btn-container #hero-btn-contact {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 100%;
+    -moz-flex: 1 100%;
+    -ms-flex: 1 100%;
+    flex: 1 100%;
+    margin-bottom: 5px; }
+  @media (min-width: 768px) {
+    #hero-btn-container #hero-btn-resume {
+      margin-right: 5px;
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      box-flex: 1;
+      -webkit-flex: 1 auto;
+      -moz-flex: 1 auto;
+      -ms-flex: 1 auto;
+      flex: 1 auto; }
+    #hero-btn-container #hero-btn-contact {
+      margin-left: 5px;
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      box-flex: 1;
+      -webkit-flex: 1 auto;
+      -moz-flex: 1 auto;
+      -ms-flex: 1 auto;
+      flex: 1 auto; } }

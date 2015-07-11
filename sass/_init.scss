@@ -2,10 +2,17 @@
  * Site-wide variables and standards (font, color, padding, etc)
  */
 $padding-sm: 1rem;
-$padding-md: 2rem;
+$padding-med: 2rem;
 $padding-lg: 4rem;
 
 /**
  * Site-wide colors
  */
 $color-primary: #222;
+
+/**
+ * Site breakpoints (these are the same as Twitter Bootstrap's breakpoints)
+ */
+$bp-sm: 768px;
+$bp-med: 992px;
+$bp-lg: 1200px;
