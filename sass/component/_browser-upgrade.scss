@@ -1,0 +1,32 @@
+.browserupgrade-container {
+  background-color: white;
+  color: #222;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: 20px solid #F44336;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding: $padding-sm;
+
+  /* Have to use primitive table centering to support older browsers...*/
+  display: table;
+
+  & > div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    & > div {
+      position: relative;
+      display: inline-block;
+
+      & > p {
+        font-size: 2em;
+        text-align: left;
+      }
+    }
+  }
+}
